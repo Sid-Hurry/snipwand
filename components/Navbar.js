@@ -28,39 +28,41 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-8 left-0 right-0 z-50 flex justify-center transition-transform duration-300 ease-in-out ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-transform duration-300 ease-in-out ${
         show ? "translate-y-0" : "-translate-y-[200%]"
       }`}
     >
-      <div
-        className="w-[90%] md:w-[80%] lg:w-[50%] max-w-5xl mx-auto px-6 py-3.5 rounded-full backdrop-blur-md border border-white/10 text-white shadow-lg flex justify-center font-gill"
-        style={{
-          background: "linear-gradient(135deg, #050f1b, #141e2d)", // even closer to black with subtle blue tones
-        }}
-      >
-        <ul className="flex gap-8 items-center text-[17px] font-semibold">
-          <li className="text-[22px] font-bold hover:text-gray-300 transition-colors duration-200">
-            <Link href="/">SnipWand</Link>
-          </li>
-          <li className="hover:text-gray-300 transition-colors duration-200">
-            <Link href="/#about">About</Link>
-          </li>
-          <li className="hover:text-gray-300 transition-colors duration-200">
-            <Link href="/#features">Features</Link>
-          </li>
-          <li className="hover:text-gray-300 transition-colors duration-200">
-            <Link href="/#contact">Contact</Link>
-          </li>
-          <li>
-            <Link
-              href="/#project-description"
-              scroll={true}
-              className="bg-black text-white px-4 py-1.5 rounded-full text-[15px] hover:bg-gray-800 transition-all duration-200"
-            >
-              Try Now
-            </Link>
-          </li>
-        </ul>
+      <div className="w-full flex justify-center py-6">
+        <div
+          className="w-[90%] md:w-[80%] lg:w-[50%] max-w-5xl mx-auto px-6 py-3.5 rounded-full backdrop-blur-md border border-white/10 text-white shadow-lg flex justify-center font-gill"
+          style={{
+            background: "linear-gradient(135deg, #000000, #0a0f24, #0b1e39)",
+          }}
+        >
+          <ul className="flex gap-8 items-center text-[17px] font-semibold">
+            <li className="text-[22px] font-bold hover:text-gray-300 transition-colors duration-200">
+              <Link href="/">SnipWand</Link>
+            </li>
+            <li className="hover:text-gray-300 transition-colors duration-200">
+              <Link href="/#about">About</Link>
+            </li>
+            <li className="hover:text-gray-300 transition-colors duration-200">
+              <Link href="/#features">Features</Link>
+            </li>
+            <li className="hover:text-gray-300 transition-colors duration-200">
+              <Link href="/#contact">Contact</Link>
+            </li>
+            <li>
+              <Link
+                href="/#project-description"
+                scroll={true}
+                className="bg-black text-white px-4 py-1.5 rounded-full text-[15px] hover:bg-gray-800 transition-all duration-200"
+              >
+                Try Now
+              </Link>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
   );
