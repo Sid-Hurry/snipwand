@@ -15,51 +15,52 @@ const Navbar = () => {
             background: "linear-gradient(135deg, #000000, #0a0f24, #0b1e39)",
           }}
         >
-          {/* Left: Logo and Links */}
-          <div className="flex items-center gap-8">
-            <div className="text-[24px] font-bold text-orange-600 leading-none">
+          {/* Main Links Section (Logo + Links + Try Now) */}
+          <ul className="hidden md:flex gap-6 items-center text-[16px] font-semibold">
+            <li className="text-[24px] font-bold text-orange-600 leading-none">
               <Link href="/">SnipWand</Link>
-            </div>
+            </li>
+            <li>
+              <Link href="/#about" className="hover:text-gray-300">
+                About
+              </Link>
+            </li>
+            <li>
+              <Link href="/#features" className="hover:text-gray-300">
+                Features
+              </Link>
+            </li>
+            <li>
+              <Link href="/#examples" className="hover:text-gray-300">
+                Examples
+              </Link>
+            </li>
+            <li>
+              <Link href="/#contact" className="hover:text-gray-300">
+                Contact
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/#project-description"
+                className="bg-black text-white px-4 py-1.5 rounded-full text-[15px] font-semibold hover:bg-gray-800"
+              >
+                Try Now
+              </Link>
+            </li>
+          </ul>
 
-            <ul className="hidden md:flex gap-8 items-center text-[17px] font-semibold">
-              <li>
-                <Link href="/#about" className="hover:text-gray-300">
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link href="/#features" className="hover:text-gray-300">
-                  Features
-                </Link>
-              </li>
-              <li>
-                <Link href="/#contact" className="hover:text-gray-300">
-                  Contact
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Right: Try Now & Mobile Menu Icon */}
-          <div className="flex items-center gap-4">
-            <Link
-              href="/#project-description"
-              className="hidden md:inline-block bg-black text-white px-4 py-1.5 rounded-full text-[15px] font-semibold hover:bg-gray-800"
-            >
-              Try Now
-            </Link>
-
-            <button
-              className="md:hidden"
-              onClick={() => setMenuOpen(!menuOpen)}
-            >
-              {menuOpen ? (
-                <X className="w-6 h-6 text-white" />
-              ) : (
-                <Menu className="w-6 h-6 text-white" />
-              )}
-            </button>
-          </div>
+          {/* Mobile Menu Icon */}
+          <button
+            className="md:hidden"
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
+            {menuOpen ? (
+              <X className="w-6 h-6 text-white" />
+            ) : (
+              <Menu className="w-6 h-6 text-white" />
+            )}
+          </button>
         </div>
       </div>
 
@@ -79,6 +80,13 @@ const Navbar = () => {
             onClick={() => setMenuOpen(false)}
           >
             Features
+          </Link>
+          <Link
+            href="/#examples"
+            className="block py-2 text-[17px] font-semibold hover:text-gray-300"
+            onClick={() => setMenuOpen(false)}
+          >
+            Examples
           </Link>
           <Link
             href="/#contact"
