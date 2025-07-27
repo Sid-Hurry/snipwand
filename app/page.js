@@ -206,9 +206,9 @@ ${technologies
       <footer className="flex flex-col sm:flex-row justify-between items-center px-6 py-6 text-sm text-white/60 border-t border-white/10">
         <div className="mb-2 sm:mb-0">Contact us at: <span className="text-white">siddharthhooda0013@gmail.com</span></div>
         <div className="flex gap-4 text-xl">
-          <Link href="#"><span role="img" aria-label="Twitter"><Image src="/X_icon.svg.png" alt="Twitter" width={24} height={24} /></span></Link>
+          <Link href="#"><span role="img" aria-label="Twitter"><Image src="/twitter-svgrepo-com.svg" alt="Twitter" width={24} height={24} /></span></Link>
           <Link href="#"><span role="img" aria-label="Github"><Image src="/github.svg" alt="Github" width={24} height={24} /></span></Link>
-          <Link href="#"><span role="img" aria-label="Linkedin"><Image src="/linkedin.svg" alt="Linkedin" width={24} height={24} /></span></Link>
+          <Link href="#"><span role="img" aria-label="Linkedin"><Image src="/linkedin-round-svgrepo-com.svg" alt="Linkedin" width={24} height={24} /></span></Link>
         </div>
       </footer>
     </main>
