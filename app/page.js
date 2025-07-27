@@ -178,7 +178,7 @@ ${technologies
                 simplicity, it streamlines your documentation workflow.
               </div>
               <div className="text-lg leading-relaxed text-gray-300 mb-4 text-left">
-                SnipWand is crafted to simplify the process of writing project documentation by offering an intuitive interface and real-time markdown previews. Whether you're a beginner or an experienced developer, SnipWand helps you generate well-structured README files without worrying about markdown syntax or formatting. It's designed to reduce the friction between code and communication.
+                SnipWand is crafted to simplify the process of writing project documentation by offering an intuitive interface and real-time markdown previews. Whether you are a beginner or an experienced developer, SnipWand helps you generate well-structured README files without worrying about markdown syntax or formatting. It is designed to reduce the friction between code and communication.
               </div>
 
               <div className="text-lg leading-relaxed text-gray-300 mb-4 text-left">
@@ -187,7 +187,7 @@ ${technologies
                 modern interface that reduces friction.
               </div>
               <div className="text-lg leading-relaxed text-gray-300 text-left">
-                Whether you're building open-source projects or internal tools,
+                Whether you are building open-source projects or internal tools,
                 SnipWand lets you present your codebase clearly and professionally
                 every time.
               </div>
