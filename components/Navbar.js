@@ -1,13 +1,36 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [showNavbar, setShowNavbar] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY && currentScrollY > 50) {
+        setShowNavbar(false); // scrolling down
+      } else {
+        setShowNavbar(true); // scrolling up
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
 
   return (
-    <nav className="w-full fixed top-0 z-50">
+    <nav
+      className={`w-full fixed top-0 z-50 transition-transform duration-300 ${
+        showNavbar ? "translate-y-0" : "-translate-y-full"
+      }`}
+    >
       <div className="flex justify-center py-6 px-4">
         <div
           className="w-full md:w-[80%] lg:w-[50%] max-w-5xl mx-auto px-6 py-3.5 rounded-full backdrop-blur-md border border-white/10 text-white shadow-lg font-gill"
@@ -102,7 +125,7 @@ const Navbar = () => {
             Examples
           </Link>
           <Link
-            href="/#contact"
+            href="/#examples"
             className="block py-2 text-[17px] font-semibold hover:text-gray-300"
             onClick={() => setMenuOpen(false)}
           >

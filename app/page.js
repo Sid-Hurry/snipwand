@@ -50,16 +50,16 @@ ${usage}
 ## Features
 
 ${features
-  .split(",")
-  .map((f) => `- ${f.trim()}`)
-  .join("\n")}
+        .split(",")
+        .map((f) => `- ${f.trim()}`)
+        .join("\n")}
 
 ## Technologies Used
 
 ${technologies
-  .split(",")
-  .map((t) => `- ${t.trim()}`)
-  .join("\n")}`;
+        .split(",")
+        .map((t) => `- ${t.trim()}`)
+        .join("\n")}`;
 
     setGeneratedReadme(readme);
   }, [formData]);
@@ -163,29 +163,52 @@ ${technologies
       </section>
 
       {/* About */}
-      <section id="about" className="pt-28 px-6">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="text-4xl font-bold mb-6 text-white">About</div>
-          <div className="text-lg leading-relaxed text-gray-200 mb-4">
-            SnipWand is your intelligent assistant for creating structured,
-            beautiful README files for your repositories. Built for speed and
-            simplicity, it streamlines your documentation workflow.
+      <section id="about" className="pt-24 px-6">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-4xl font-bold text-center  text-white">
+            About
           </div>
-          <div className="text-lg leading-relaxed text-gray-300 mb-4">
-            Designed with developers in mind, it features real-time markdown
-            preview, pre-filled sections for best practices, and a clean,
-            modern interface that reduces friction.
-          </div>
-          <div className="text-lg leading-relaxed text-gray-400">
-            Whether you&#39;re building open-source projects or internal tools,
-            SnipWand lets you present your codebase clearly and professionally
-            — every time.
+
+          <div className="flex flex-col md:flex-row gap-2  md:items-center">
+            {/* Text */}
+            <div className="md:w-1/2 flex flex-col">
+              <div className="text-lg leading-relaxed text-gray-300 mb-4 text-left">
+                SnipWand is your intelligent assistant for creating structured,
+                beautiful README files for your repositories. Built for speed and
+                simplicity, it streamlines your documentation workflow.
+              </div>
+              <div className="text-lg leading-relaxed text-gray-300 mb-4 text-left">
+                SnipWand is crafted to simplify the process of writing project documentation by offering an intuitive interface and real-time markdown previews. Whether you're a beginner or an experienced developer, SnipWand helps you generate well-structured README files without worrying about markdown syntax or formatting. It's designed to reduce the friction between code and communication.
+              </div>
+
+              <div className="text-lg leading-relaxed text-gray-300 mb-4 text-left">
+                Designed with developers in mind, it features real-time markdown
+                preview, pre-filled sections for best practices, and a clean,
+                modern interface that reduces friction.
+              </div>
+              <div className="text-lg leading-relaxed text-gray-300 text-left">
+                Whether you're building open-source projects or internal tools,
+                SnipWand lets you present your codebase clearly and professionally
+                every time.
+              </div>
+            </div>
+
+            {/* Image */}
+            <div className="md:w-1/2 flex justify-center">
+              <Image
+                src="/Untitled_design-removebg-preview.png"
+                alt="About SnipWand"
+                width={500}
+                height={500}
+                className="rounded-2xl shadow-xl"
+              />
+            </div>
           </div>
         </div>
       </section>
 
       {/* Features */}
-      <section id="features" className="pt-28 pb-16 px-6">
+      <section id="features" className="pt-20 pb-16 px-6">
         <div className="max-w-6xl mx-auto text-center">
           <div className="text-4xl font-bold text-white mb-12">Features</div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -194,23 +217,71 @@ ${technologies
                 key={index}
                 className="p-6 bg-white/10 text-white rounded-2xl border border-white/20 shadow-lg backdrop-blur-xl transition-transform hover:scale-[1.02]"
               >
-                <div className="text-xl font-semibold mb-2">{feature.title}</div>
-                <div className="text-white/80 text-[15px]">{feature.description}</div>
+                <div className="text-xl font-semibold mb-2">
+                  {feature.title}
+                </div>
+                <div className="text-white/80 text-[15px]">
+                  {feature.description}
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
+      {/* Examples */}
+      <section id="examples" className="pt-10 pb-24 px-6">
+        <div className="max-w-6xl mx-auto text-center">
+          <h2 className="text-4xl font-bold text-white mb-10">Examples</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 place-items-center">
+            <Image
+              src="/ex1.png"
+              alt="Example Snippet 1"
+              width={500}
+              height={300}
+              className="rounded-xl shadow-lg border border-white/20"
+            />
+            <Image
+              src="/ex2.png"
+              alt="Example Snippet 2"
+              width={500}
+              height={300}
+              className="rounded-xl shadow-lg border border-white/20"
+            />
+          </div>
+        </div>
+      </section>
+
 
       {/* Footer */}
-      <footer className="flex flex-col sm:flex-row justify-between items-center px-6 py-6 text-sm text-white/60 border-t border-white/10">
-        <div className="mb-2 sm:mb-0">Contact us at: <span className="text-white">siddharthhooda0013@gmail.com</span></div>
+      <section id="footer" >
+      <footer  className="flex flex-col sm:flex-row justify-between items-center px-6 py-6 text-sm text-white/60 border-t border-white/10">
+        <div className="mb-2 sm:mb-0">
+          Contact us at:{" "}
+          <span className="text-white">siddharthhooda0013@gmail.com</span>
+        </div>
         <div className="flex gap-4 text-xl">
-          <Link href="#"><span role="img" aria-label="Twitter"><Image src="/twitter-svgrepo-com.svg" alt="Twitter" width={24} height={24} /></span></Link>
-          <Link href="#"><span role="img" aria-label="Github"><Image src="/github.svg" alt="Github" width={24} height={24} /></span></Link>
-          <Link href="#"><span role="img" aria-label="Linkedin"><Image src="/linkedin-round-svgrepo-com.svg" alt="Linkedin" width={24} height={24} /></span></Link>
+          <Link href="https://x.com/02_Opinionated?t=wkeK3m3p4Fpj7nUO3x0saw&s=09" target="_blank">
+            <Image
+              src="/twitter-svgrepo-com.svg"
+              alt="Twitter"
+              width={24}
+              height={24}
+            />
+          </Link>
+          <Link href="https://github.com/Sid-Hurry" target="_blank">
+            <Image src="/github.svg" alt="Github" width={24} height={24} />
+          </Link>
+          <Link href="https://www.linkedin.com/in/siddharth-hooda-188606324/" target="_blank">
+            <Image
+              src="/linkedin-round-svgrepo-com.svg"
+              alt="Linkedin"
+              width={24}
+              height={24}
+            />
+          </Link>
         </div>
       </footer>
+      </section>
     </main>
   );
 }
