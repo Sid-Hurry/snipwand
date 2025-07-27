@@ -169,7 +169,7 @@ ${technologies
 
       {/* About Section */}
       <section id="about" className="py-20 px-6 text-center">
-        {/* <div className="text-3xl font-bold mb-4">About</div> */}
+        <div className="text-3xl font-bold ">About</div>
        <About />
       </section>
 
