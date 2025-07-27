@@ -10,15 +10,20 @@ const Navbar = () => {
     <nav className="w-full fixed top-0 z-50">
       <div className="flex justify-center py-6 px-4">
         <div
-          className="w-full md:w-[80%] lg:w-[50%] max-w-5xl mx-auto px-6 py-3.5 rounded-full backdrop-blur-md border border-white/10 text-white shadow-lg flex items-center justify-between font-gill"
+          className="w-full md:w-[80%] lg:w-[50%] max-w-5xl mx-auto px-6 py-3.5 rounded-full backdrop-blur-md border border-white/10 text-white shadow-lg font-gill"
           style={{
             background: "linear-gradient(135deg, #000000, #0a0f24, #0b1e39)",
           }}
         >
-          {/* Main Links Section (Logo + Links + Try Now) */}
-          <ul className="hidden md:flex gap-6 items-center text-[16px] font-semibold">
-            <li className="text-[24px] font-bold text-orange-600 leading-none">
-              <Link href="/">SnipWand</Link>
+          {/* Desktop Menu */}
+          <ul className="hidden md:flex gap-6 items-center justify-center w-full text-[16px] font-semibold">
+            <li>
+              <Link
+                href="/"
+                className="text-[22px] font-bold text-orange-600 leading-none"
+              >
+                SnipWand
+              </Link>
             </li>
             <li>
               <Link href="/#about" className="hover:text-gray-300">
@@ -50,21 +55,29 @@ const Navbar = () => {
             </li>
           </ul>
 
-          {/* Mobile Menu Icon */}
-          <button
-            className="md:hidden"
-            onClick={() => setMenuOpen(!menuOpen)}
-          >
-            {menuOpen ? (
-              <X className="w-6 h-6 text-white" />
-            ) : (
-              <Menu className="w-6 h-6 text-white" />
-            )}
-          </button>
+          {/* Mobile Logo and Menu Icon */}
+          <div className="md:hidden flex items-center justify-between w-full">
+            <Link
+              href="/"
+              className="text-[22px] font-bold text-orange-600 leading-none"
+            >
+              SnipWand
+            </Link>
+            <button
+              className="md:hidden"
+              onClick={() => setMenuOpen(!menuOpen)}
+            >
+              {menuOpen ? (
+                <X className="w-6 h-6 text-white" />
+              ) : (
+                <Menu className="w-6 h-6 text-white" />
+              )}
+            </button>
+          </div>
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Dropdown Menu */}
       {menuOpen && (
         <div className="md:hidden bg-[#0a0f24] px-6 pb-6 rounded-b-3xl text-white text-center space-y-4">
           <Link
