@@ -176,7 +176,7 @@ ${technologies
             modern interface that reduces friction.
           </div>
           <div className="text-lg leading-relaxed text-gray-400">
-            Whether you're building open-source projects or internal tools,
+            Whether you&#39;re building open-source projects or internal tools,
             SnipWand lets you present your codebase clearly and professionally
             — every time.
           </div>
