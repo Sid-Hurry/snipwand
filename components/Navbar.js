@@ -1,10 +1,12 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
   const [show, setShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const controlNavbar = () => {
     if (typeof window !== "undefined") {
@@ -34,15 +36,17 @@ const Navbar = () => {
     >
       <div className="w-full flex justify-center py-6">
         <div
-          className="w-[90%] md:w-[80%] lg:w-[50%] max-w-5xl mx-auto px-6 py-3.5 rounded-full backdrop-blur-md border border-white/10 text-white shadow-lg flex justify-center font-gill"
+          className="w-[90%] md:w-[80%] lg:w-[50%] max-w-5xl mx-auto px-6 py-3.5 rounded-full backdrop-blur-md border border-white/10 text-white shadow-lg flex justify-between items-center font-gill"
           style={{
             background: "linear-gradient(135deg, #000000, #0a0f24, #0b1e39)",
           }}
         >
-          <ul className="flex gap-8 items-center text-[17px] font-semibold">
-            <li className="text-[22px] font-bold hover:text-gray-300 transition-colors duration-200">
-              <Link href="/">SnipWand</Link>
-            </li>
+          <div className="text-[24px] font-bold text-orange-600">
+            <Link href="/">SnipWand</Link>
+          </div>
+
+          {/* Desktop Nav */}
+          <ul className="hidden md:flex gap-8 items-center text-[17px] font-semibold">
             <li className="hover:text-gray-300 transition-colors duration-200">
               <Link href="/#about">About</Link>
             </li>
@@ -62,8 +66,51 @@ const Navbar = () => {
               </Link>
             </li>
           </ul>
+
+          {/* Mobile Menu Icon */}
+          <div className="md:hidden">
+            <button onClick={() => setMenuOpen(!menuOpen)}>
+              {menuOpen ? (
+                <X className="w-6 h-6 text-white" />
+              ) : (
+                <Menu className="w-6 h-6 text-white" />
+              )}
+            </button>
+          </div>
         </div>
       </div>
+
+      {/* Mobile Menu Items */}
+      {menuOpen && (
+        <div className="md:hidden absolute top-[92px] left-1/2 transform -translate-x-1/2 w-[90%] max-w-5xl bg-[#0a0f24] text-white rounded-2xl py-6 px-4 shadow-lg backdrop-blur-lg border border-white/10">
+          <ul className="flex flex-col items-center gap-6 text-[17px] font-semibold">
+            <li>
+              <Link href="/#about" onClick={() => setMenuOpen(false)}>
+                About
+              </Link>
+            </li>
+            <li>
+              <Link href="/#features" onClick={() => setMenuOpen(false)}>
+                Features
+              </Link>
+            </li>
+            <li>
+              <Link href="/#contact" onClick={() => setMenuOpen(false)}>
+                Contact
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/#project-description"
+                onClick={() => setMenuOpen(false)}
+                className="bg-black text-white px-4 py-1.5 rounded-full text-[15px] hover:bg-gray-800 transition-all duration-200"
+              >
+                Try Now
+              </Link>
+            </li>
+          </ul>
+        </div>
+      )}
     </nav>
   );
 };
