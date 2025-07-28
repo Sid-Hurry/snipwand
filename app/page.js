@@ -253,35 +253,57 @@ ${technologies
 
 
       {/* Footer */}
-      <section id="footer" >
-      <footer  className="flex flex-col sm:flex-row justify-between items-center px-6 py-6 text-sm text-white/60 border-t border-white/10">
-        <div className="mb-2 sm:mb-0">
-          Contact us at:{" "}
-          <span className="text-white">siddharthhooda0013@gmail.com</span>
-        </div>
-        <div className="flex gap-4 text-xl">
-          <Link href="https://x.com/02_Opinionated?t=wkeK3m3p4Fpj7nUO3x0saw&s=09" target="_blank">
-            <Image
-              src="/twitter-svgrepo-com.svg"
-              alt="Twitter"
-              width={24}
-              height={24}
-            />
-          </Link>
-          <Link href="https://github.com/Sid-Hurry" target="_blank">
-            <Image src="/github.svg" alt="Github" width={24} height={24} />
-          </Link>
-          <Link href="https://www.linkedin.com/in/siddharth-hooda-188606324/" target="_blank">
-            <Image
-              src="/linkedin-round-svgrepo-com.svg"
-              alt="Linkedin"
-              width={24}
-              height={24}
-            />
-          </Link>
-        </div>
-      </footer>
-      </section>
+ <section id="footer">
+  <footer className="flex flex-col sm:flex-row justify-between items-center px-6 py-6 text-sm text-white/60 border-t border-white/10 gap-4 sm:gap-0">
+    
+    {/* Contact Info */}
+    <div className="text-center sm:text-left">
+      Contact us at:{" "}
+      <span className="text-gray-300/80">
+        siddharthhooda0013@gmail.com
+      </span>
+    </div>
+
+    {/* Middle Branding */}
+    
+    {/* Social Icons */}
+    <div className="flex gap-4 text-xl">
+      <Link
+        href="https://x.com/02_Opinionated?t=wkeK3m3p4Fpj7nUO3x0saw&s=09"
+        target="_blank"
+        aria-label="Twitter"
+      >
+        <Image
+          src="/twitter-svgrepo-com.svg"
+          alt="Twitter"
+          width={24}
+          height={24}
+        />
+      </Link>
+      <Link
+        href="https://github.com/Sid-Hurry"
+        target="_blank"
+        aria-label="GitHub"
+      >
+        <Image src="/github.svg" alt="GitHub" width={24} height={24} />
+      </Link>
+      <Link
+        href="https://www.linkedin.com/in/siddharth-hooda-188606324/"
+        target="_blank"
+        aria-label="LinkedIn"
+      >
+        <Image
+          src="/linkedin-round-svgrepo-com.svg"
+          alt="LinkedIn"
+          width={24}
+          height={24}
+        />
+      </Link>
+    </div>
+  </footer>
+</section>
+
+
     </main>
   );
 }
