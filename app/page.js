@@ -274,7 +274,7 @@ ${technologies
         aria-label="Twitter"
       >
         <Image
-          src="/twitter-svgrepo-com.svg"
+          src="/Twitter-New-Logo-X-2023-.jpg"
           alt="Twitter"
           width={24}
           height={24}
@@ -285,7 +285,7 @@ ${technologies
         target="_blank"
         aria-label="GitHub"
       >
-        <Image src="/github.svg" alt="GitHub" width={24} height={24} />
+        <Image src="/githubbb.png" alt="GitHub" width={24} height={24} />
       </Link>
       <Link
         href="https://www.linkedin.com/in/siddharth-hooda-188606324/"
@@ -293,7 +293,7 @@ ${technologies
         aria-label="LinkedIn"
       >
         <Image
-          src="/linkedin-round-svgrepo-com.svg"
+          src="/linkedin.jpg"
           alt="LinkedIn"
           width={24}
           height={24}
